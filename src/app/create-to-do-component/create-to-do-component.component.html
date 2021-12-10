@@ -1,0 +1,78 @@
+<section>
+    <div class="row">
+        <div class="col-12">
+            <div class="card login-form form-bx show" ng-reflect-klass="login-form form-bx " ng-reflect-ng-class="show">
+                <h2>Form</h2>
+                <form [formGroup]="form">
+                    <div class="main-form">
+                        <div class="form-group"><label>Task Name</label>
+                            <textarea autocomplete="off" (keyup)="changeObjectWithRef($event)" class="form-control DesText" rows="4" placeholder="Name of task" formControlName="Nameoftask"></textarea>
+                                                        
+                            <div class="text-danger" *ngIf="form.controls['Nameoftask'].hasError('required')  && showError">
+                                *Please Enter Task Name.
+                            </div>
+                            <div class="text-danger" *ngIf="form.controls['Nameoftask'].hasError('minlength') && showError">
+                                *Minimum length of 2 characters.
+                            </div>
+                            <div class="text-danger " *ngIf="form.controls[ 'Nameoftask'].hasError( 'maxlength')  && showError">
+                                                            *Maximum length of 500 characters.
+                                                        </div>
+
+                        </div>
+                        <div class="form-group"><label>Task Description</label>
+                            <textarea autocomplete="off" (keyup)="changeObjectWithRef($event)" class="form-control DesText" rows="4" placeholder="Description of the task" formControlName="taskDesc"></textarea>
+                            <div class="text-danger" *ngIf="form.controls['taskDesc'].hasError('required')  && showError">
+                                *Please Enter Task Description.
+                            </div>
+                            <div class="text-danger" *ngIf="form.controls['taskDesc'].hasError('minlength') && showError">
+                                *Minimum length of 2 characters.
+                            </div>
+                            <div class="text-danger " *ngIf="form.controls[ 'taskDesc'].hasError( 'maxlength') && showError">
+                                                            *Maximum length of 500 characters.
+                                                        </div>
+
+                        </div>
+                        <div class="form-group"><label>Repeating Task</label>
+                            <select class="form-control" (change)="changeObjectWithRef($event)" placeholder="Select" formControlName="Repeating">
+                                                                
+                                <option value="" selected>Select
+                                        </option>
+                                        <option value="Y">Y
+                                      </option>
+                                      <option value="N">N
+                                      </option>
+                                      
+                                    </select>
+                                    <div class="text-danger" *ngIf="form.controls['Repeating'].hasError('required')  && showError">
+                                        *Please Seclect option.
+                                    </div>
+
+                        </div>
+                       
+                    </div>
+                </form>
+            </div>
+            </div>
+            <div class="col-12">
+                <div class="tab-section mb-3 ml-3 user-tab-section">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item width">
+                            <a (click)="isselected('TodoList')" class="{{selected=='TodoList'?'nav-link active':'nav-link'}}">To Do List</a>
+                        </li>
+                        <li class="nav-item width1">
+                            <a (click)="isselected('TodoDoneList')" class="{{selected=='TodoDoneList'?'nav-link active':'nav-link'}}">Completed List</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div *ngIf="selected=='TodoList'" class="pl-3">
+                    <app-to-do-list-component [simpleProperty]="simpleProp" [objectProperty]="objectProp" (changeDetected)="onChangeDetected($event)"></app-to-do-list-component>
+    
+                </div>
+                <div *ngIf="selected=='TodoDoneList'" class="pl-3">
+                    <app-done-list-component [simpleProperty]="simpleProp" [objectProperty]="objectProp" (changeDetected)="onChangeDetected($event)"></app-done-list-component>
+    
+                </div>
+        </div>
+    </div>
+</section>

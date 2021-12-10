@@ -1,0 +1,42 @@
+<section>
+    <div class="table-scroll">
+        <div class="table-responsive ibox">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Sr.No</th>
+                        <th>Mark as UnDone</th>
+                        <th scope="col">Task Name
+                        </th>
+                        <th scope="col">Task Description
+                        </th>
+                        <th scope="col">
+                            Repeating Task
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of ArrayList;let int = index">
+                        <td scope="row" class="cursolhand">{{int +1}}</td>
+                        <td class="checkbox1">
+                            <input type="checkbox" id="html" [checked]="data.checked" (change)="changeRememberme($event,int)">
+                            <label for="html" class="d-flex leftlabel">
+                            </label>     
+                        </td>
+                        <td scope="row" class="cursolhand">{{data.Nameoftask}}</td>
+                        
+                        <td scope="row" class="cursolhand">{{data.taskDesc}}</td>
+                        <td scope="row" class="cursolhand">{{data.Repeating}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="searchResult" *ngIf="ArrayList?.length == 0">
+                <div class="searcing">
+                    <h5>No record found!</h5>
+                </div>
+            </div>
+             </div>
+        </div>
+</section>

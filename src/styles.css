@@ -1,0 +1,168 @@
+/* You can add global styles to this file, and also import other style files */
+.card {
+    overflow: hidden;
+    position: relative;
+    width: 450px;
+    margin: 30px auto;
+    background: #fff;
+    z-index: 1;
+    min-height: 301px;
+    padding: 30px;
+}
+
+
+/* tab-Select */
+
+.tab-section {
+    padding: 0px 0px;
+    border-radius: 2px 2px 0px 0px;
+    margin-bottom: 5px;
+    background: rgba(43, 48, 55, 0.1);
+    display: inline-block;
+    z-index: 9;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 50px;
+}
+
+.tab-section .nav-tabs {
+    border-bottom: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tab-section .nav-tabs li a {
+    padding: 10px 30px;
+    display: block;
+    font-size: 14px;
+    position: relative;
+    border-radius: 50px;
+    text-align: center;
+    border: none;
+    color: #000;
+}
+
+.tab-section .nav-tabs li a.active {
+    color: #fff;
+    background-color: #FDD737;
+}
+
+.tab-section .nav-tabs li {
+    list-style: none;
+    display: inline-block;
+    min-width: 175px;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: -1px;
+}
+
+
+/* end */
+
+
+/*searchResult css */
+
+.searchResult {
+    /*    height: 100%;*/
+    border-radius: 8px;
+    background: #fff;
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+
+.searchResult:before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    border-radius: 8px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* width: calc(100% * 1.2); */
+    height: 100%;
+}
+
+.searchResult .searcing {
+    /*position: absolute; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); left: 0; right: 0;*/
+    padding: 80px 0;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+    position: relative
+}
+
+.searchResult .searcing img {
+    margin-bottom: 25px;
+}
+
+.searchResult .searcing h5 {
+    font-size: 18px;
+    color: #A0A9B2;
+    font-weight: 400;
+}
+
+
+/* end searchResult */
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+body{
+    width: 98% !important;
+}
+
+
+/* checkbox css */
+
+.checkbox1 input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.checkbox1 label {
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox1 label:before {
+    content: '' !important;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #FDCE09;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+    top: -1px;
+    height: 17px;
+}
+
+.checkbox1 input:checked:hover {
+    background: #Fed732 !important;
+}
+
+.checkbox1 input:checked+label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+/* end checkbox */
