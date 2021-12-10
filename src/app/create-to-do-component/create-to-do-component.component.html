@@ -6,7 +6,7 @@
                 <form [formGroup]="form">
                     <div class="main-form">
                         <div class="form-group"><label>Task Name</label>
-                            <textarea autocomplete="off" (keyup)="changeObjectWithRef($event)" class="form-control DesText" rows="4" placeholder="Name of task" formControlName="Nameoftask"></textarea>
+                            <textarea autocomplete="off" (keyup)="changeObjectWithRef($event)" class="form-control DesText" rows="2" placeholder="Name of task" formControlName="Nameoftask"></textarea>
                                                         
                             <div class="text-danger" *ngIf="form.controls['Nameoftask'].hasError('required')  && showError">
                                 *Please Enter Task Name.
@@ -20,7 +20,7 @@
 
                         </div>
                         <div class="form-group"><label>Task Description</label>
-                            <textarea autocomplete="off" (keyup)="changeObjectWithRef($event)" class="form-control DesText" rows="4" placeholder="Description of the task" formControlName="taskDesc"></textarea>
+                            <textarea autocomplete="off" (keyup)="changeObjectWithRef($event)" class="form-control DesText" rows="2" placeholder="Description of the task" formControlName="taskDesc"></textarea>
                             <div class="text-danger" *ngIf="form.controls['taskDesc'].hasError('required')  && showError">
                                 *Please Enter Task Description.
                             </div>
