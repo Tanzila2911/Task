@@ -112,6 +112,12 @@
 }
 body{
     width: 98% !important;
+    
+    background: #f2f3fa;
+    letter-spacing: 1px;
+}
+.table-scroll{
+    background-color: #fff;
 }
 
 
